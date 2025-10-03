@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+      <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
     <link
@@ -137,35 +141,68 @@
             <li>
               <h3>Terminal Operations</h3>
               <p>
-                Expert bulk and container handling with advanced safety
-                protocols.
+                 We specialize in expert bulk and container handling supported by 
+          advanced safety protocols and state-of-the-art equipment. Our team
+          ensures smooth operations around the clock, minimizing downtime and
+          maximizing throughput for all shipments.
               </p>
+               <p>
+          From vessel loading and unloading to cross-docking and yard 
+          management, we provide reliable end-to-end solutions designed to 
+          keep goods flowing without disruption.
+        </p>
             </li>
             <li>
               <h3>Warehousing &amp; Storage</h3>
-              <p>
-                Flexible storage facilities with modern inventory management.
-              </p>
+               <p>
+          Our flexible storage facilities are designed to adapt to your
+          business needs. With modern inventory management systems, we provide
+          real-time visibility and control over your goods.
+        </p>
+        <p>
+          Whether it’s short-term storage for fast-moving products or long-term 
+          solutions for bulk commodities, our warehouses are climate-controlled, 
+          secure, and strategically located for efficient distribution.
+        </p>
             </li>
             <li>
               <h3>Freight Management</h3>
-              <p>
-                Customized logistics solutions tailored to your supply chain.
-              </p>
+                <p>
+          We offer customized logistics solutions that streamline your supply 
+          chain and reduce operational complexities. Our freight management 
+          services cover planning, consolidation, documentation, and 
+          coordination across all transportation modes.
+        </p>
+        <p>
+          By leveraging our partnerships with carriers and leveraging data-driven 
+          insights, we help reduce costs while ensuring timely and reliable delivery.
+        </p>
             </li>
             <li>
               <h3>Multimodal Transport</h3>
-              <p>
-                Seamless integration of rail, truck, and port distribution
-                channels.
-              </p>
+                <p>
+          Our multimodal services integrate rail, truck, and port distribution 
+          channels to provide seamless connectivity between local, regional, and 
+          international markets.
+        </p>
+        <p>
+          This interconnected approach reduces transit times, lowers costs, and 
+          ensures that shipments move efficiently across different geographies 
+          without delays or bottlenecks.
+        </p>
             </li>
             <li>
               <h3>Value-Added Services</h3>
-              <p>
-                Packaging, labeling, and distribution support to streamline
-                operations.
-              </p>
+               <p>
+          Beyond standard logistics, we provide value-added services that give 
+          your business an edge. These include packaging, labeling, palletizing, 
+          repacking, and distribution support tailored to your operational needs.
+        </p>
+        <p>
+          Our team ensures goods are prepared according to market standards and 
+          customer requirements, helping streamline downstream operations and 
+          enhancing overall supply chain performance.
+        </p>
             </li>
           </ul>
         </div>
@@ -180,7 +217,7 @@
             dedicated to providing efficient, secure, and transparent solutions
             for businesses of all sizes. With decades of industry expertise and
             a commitment to innovation, we serve as a vital link in the supply
-            chain — ensuring goods are handled with care, stored securely, and
+            chain — ensuring products are handled with care, stored securely, and
             transported on time.
           </p>
           <h3>Our Mission</h3>
@@ -206,28 +243,68 @@
       </section>
     </main>
 
-    <footer class="site-footer" id="contact">
-      <div class="container footer__grid">
-        <div>
-          
-          <p>© <span id="year"></span> Red River Terminal</p>
-        </div>
-        <form class="newsletter" id="newsletter-form" novalidate>
-          <label for="email">Subscribe for updates</label>
-          <div class="newsletter__row">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="info@redriverterminal.com"
-              required
-            />
-            <button type="submit" class="btn btn--ghost">Subscribe</button>
+   <footer class="site-footer bg-dark text-light py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <p class="mb-0">
+              © <span id="year"></span> Red River Terminal
+            </p>
           </div>
-          <p class="form__hint" id="newsletter-hint" aria-live="polite"></p>
-        </form>
+
+          <!-- Contact Form -->
+          <div class="col-md-6">
+            <form id="contact-form" method="POST" action="/send-mail">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder=""
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder=""
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js" defer></script>
+
+
 
     <script src="./js/main.js" defer></script>
   </body>
