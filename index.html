@@ -11,11 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-      <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -28,29 +24,32 @@
   </head>
   <body>
     <header class="site-header" id="site-header">
-      <div class="container header__grid">
-        <a class="logo" href="#" aria-label="Red River Terminal Home">
+      <div class="container header__inner">
+        <a class="logo" href="#home" aria-label="Red River Terminal Home">
           <img
             src="./assets/images/PHOTO-2025-09-30-14-23-43%202.jpg"
-            alt="Red River Terminal"
-            width="60"
-            height="60"
+            alt=""
+            width="48"
+            height="48"
+            class="logo__mark"
           />
-          Red River Terminal
+          <span class="logo__text">Red River Terminal</span>
         </a>
         <nav class="nav" aria-label="Primary">
           <button
             class="nav__toggle"
+            type="button"
             aria-expanded="false"
             aria-controls="nav-menu"
-            aria-label="Open Menu"
+            aria-label="Open menu"
           >
-            ☰
+            <span class="nav__toggle-icon" aria-hidden="true"></span>
           </button>
           <ul id="nav-menu" class="nav__list">
             <li><a class="nav__link" href="#home">Home</a></li>
             <li><a class="nav__link" href="#services">Services</a></li>
             <li><a class="nav__link" href="#about">About</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <div class="header__cta">
@@ -61,73 +60,110 @@
 
     <main>
       <section class="hero" id="home">
-        <div class="container hero__headline">
-          <h1>
-            More Than Just <span class="spark">A</span>
-            <span class="accent">Logistic</span> Shipment
-          </h1>
-          <p>
-            We deliver your package quickly and safely with real-time tracking
-            and 24/7 support.
-          </p>
-          <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary">Contact Us</a>
-            <a href="#services" class="btn btn--ghost">Our Services</a>
+        <div class="hero__mesh" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Logistics &amp; terminal operations</p>
+            <h1 class="hero__title">
+              More than just a
+              <span class="hero__title-accent">logistics</span> shipment
+            </h1>
+            <p class="hero__lead">
+              Fast, secure freight handling with real-time visibility and support
+              when you need it—so your cargo keeps moving.
+            </p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">Get in touch</a>
+              <a href="#services" class="btn btn--ghost">Explore services</a>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="hero__frame">
+              <img
+                src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1600&amp;q=80"
+                alt="Aerial view of shipping containers at a freight terminal"
+                width="1200"
+                height="800"
+                loading="eager"
+                class="hero__img"
+              />
+            </div>
           </div>
         </div>
-
-        <div class="hero__image" aria-hidden="true">
-          <img
-            src="https://res.cloudinary.com/ddmfwmeoy/image/upload/v1759268582/ian-taylor-jOqJbvo1P9g-unsplash_ujc6gm.jpg"
-            alt="Large container ship sailing on ocean"
-            loading="eager"
-          />
+        <div class="hero__ribbon">
+          <div class="container hero__ribbon-inner">
+            <span class="hero__ribbon-label">Capabilities</span>
+            <ul class="hero__ribbon-list">
+              <li><a href="#services">Terminal ops</a></li>
+              <li><a href="#services">Warehousing</a></li>
+              <li><a href="#services">Freight management</a></li>
+              <li><a href="#services">Multimodal</a></li>
+              <li><a href="#services">Value-added</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="hero__tabs">
-          <div class="container hero__tabs__row">
-            <a href="#services">Terminal Ops</a>
-            <a href="#services">Warehousing</a>
-            <a href="#services">Freight Mgmt</a>
-            <a href="#services">Multimodal</a>
-            <a href="#services">Value-Added</a>
+      </section>
+
+      <section class="section section--stats reveal" aria-label="Highlights">
+        <div class="container stats">
+          <div class="stat">
+            <span class="stat__value">24/7</span>
+            <span class="stat__label">Operations support</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">Real-time</span>
+            <span class="stat__label">Shipment visibility</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">Nationwide</span>
+            <span class="stat__label">Terminal network</span>
           </div>
         </div>
       </section>
 
       <section class="section" id="features">
         <div class="container">
-          <h2 class="section__title">
-            Deliver Your <span class="accent">Logistic</span> Safely and Quickly
-          </h2>
+          <header class="section__head reveal">
+            <p class="eyebrow">Why choose us</p>
+            <h2 class="section__title">
+              Deliver your logistics
+              <span class="accent">safely and quickly</span>
+            </h2>
+            <p class="section__sub">
+              From yard to warehouse to final mile—we protect your freight and
+              keep you informed at every step.
+            </p>
+          </header>
           <div class="cards cards--3">
-            <article class="card feature">
-              <div class="icon">
-                <img src="./assets/icons/shield.svg" alt="Protected" />
+            <article class="card feature reveal">
+              <div class="card__accent" aria-hidden="true"></div>
+              <div class="feature__icon">
+                <img src="./assets/icons/shield.svg" alt="" />
               </div>
-              <h3>Always Protected Your Packages</h3>
-              <p>
-                We guarantee the safety of your packages from the time the goods
-                are delivered to their destination.
+              <h3 class="card__title">Protected cargo</h3>
+              <p class="card__text">
+                Safety protocols and disciplined handling from receipt through
+                delivery.
               </p>
             </article>
-            <article class="card feature">
-              <div class="icon">
-                <img src="./assets/icons/radar.svg" alt="Live tracking" />
+            <article class="card feature reveal">
+              <div class="card__accent" aria-hidden="true"></div>
+              <div class="feature__icon">
+                <img src="./assets/icons/radar.svg" alt="" />
               </div>
-              <h3>You Can Live Track Your Packages</h3>
-              <p>
-                Monitor and track your goods easily, accurately, and in real
-                time anywhere and anytime.
+              <h3 class="card__title">Live tracking</h3>
+              <p class="card__text">
+                Monitor movement with accuracy—anywhere, anytime.
               </p>
             </article>
-            <article class="card feature">
-              <div class="icon">
-                <img src="./assets/icons/headset.svg" alt="Support" />
+            <article class="card feature reveal">
+              <div class="card__accent" aria-hidden="true"></div>
+              <div class="feature__icon">
+                <img src="./assets/icons/headset.svg" alt="" />
               </div>
-              <h3>Our Customer Service Is Here 24/7</h3>
-              <p>
-                We provide customer service that will serve you if you have a
-                problem with your packages.
+              <h3 class="card__title">Always-on support</h3>
+              <p class="card__text">
+                A team ready to help when schedules shift or questions arise.
               </p>
             </article>
           </div>
@@ -136,176 +172,194 @@
 
       <section class="section section--dark" id="services">
         <div class="container">
-          <h2 class="section__title section__title--on-dark">Our Services</h2>
-          <ul class="services-list">
-            <li>
-              <h3>Terminal Operations</h3>
-              <p>
-                 We specialize in expert bulk and container handling supported by 
-          advanced safety protocols and state-of-the-art equipment. Our team
-          ensures smooth operations around the clock, minimizing downtime and
-          maximizing throughput for all shipments.
+          <header class="section__head section__head--dark reveal">
+            <p class="eyebrow eyebrow--on-dark">Our services</p>
+            <h2 class="section__title section__title--on-dark">
+              End-to-end terminal &amp; freight solutions
+            </h2>
+            <p class="section__sub section__sub--on-dark">
+              Scalable operations built around your lanes, seasons, and
+              compliance needs.
+            </p>
+          </header>
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <span class="service-card__num">01</span>
+              <h3 class="service-card__title">Terminal operations</h3>
+              <p class="service-card__text">
+                Bulk and container handling with modern equipment and strict
+                safety—loading, unloading, cross-dock, and yard management
+                around the clock.
               </p>
-               <p>
-          From vessel loading and unloading to cross-docking and yard 
-          management, we provide reliable end-to-end solutions designed to 
-          keep goods flowing without disruption.
-        </p>
-            </li>
-            <li>
-              <h3>Warehousing &amp; Storage</h3>
-               <p>
-          Our flexible storage facilities are designed to adapt to your
-          business needs. With modern inventory management systems, we provide
-          real-time visibility and control over your goods.
-        </p>
-        <p>
-          Whether it’s short-term storage for fast-moving products or long-term 
-          solutions for bulk commodities, our warehouses are climate-controlled, 
-          secure, and strategically located for efficient distribution.
-        </p>
-            </li>
-            <li>
-              <h3>Freight Management</h3>
-                <p>
-          We offer customized logistics solutions that streamline your supply 
-          chain and reduce operational complexities. Our freight management 
-          services cover planning, consolidation, documentation, and 
-          coordination across all transportation modes.
-        </p>
-        <p>
-          By leveraging our partnerships with carriers and leveraging data-driven 
-          insights, we help reduce costs while ensuring timely and reliable delivery.
-        </p>
-            </li>
-            <li>
-              <h3>Multimodal Transport</h3>
-                <p>
-          Our multimodal services integrate rail, truck, and port distribution 
-          channels to provide seamless connectivity between local, regional, and 
-          international markets.
-        </p>
-        <p>
-          This interconnected approach reduces transit times, lowers costs, and 
-          ensures that shipments move efficiently across different geographies 
-          without delays or bottlenecks.
-        </p>
-            </li>
-            <li>
-              <h3>Value-Added Services</h3>
-               <p>
-          Beyond standard logistics, we provide value-added services that give 
-          your business an edge. These include packaging, labeling, palletizing, 
-          repacking, and distribution support tailored to your operational needs.
-        </p>
-        <p>
-          Our team ensures goods are prepared according to market standards and 
-          customer requirements, helping streamline downstream operations and 
-          enhancing overall supply chain performance.
-        </p>
-            </li>
-          </ul>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-card__num">02</span>
+              <h3 class="service-card__title">Warehousing &amp; storage</h3>
+              <p class="service-card__text">
+                Flexible space with inventory visibility—short-term surge or
+                long-term storage in secure, climate-ready facilities.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-card__num">03</span>
+              <h3 class="service-card__title">Freight management</h3>
+              <p class="service-card__text">
+                Planning, consolidation, documentation, and coordination across
+                modes—fewer handoffs, clearer accountability.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <span class="service-card__num">04</span>
+              <h3 class="service-card__title">Multimodal transport</h3>
+              <p class="service-card__text">
+                Rail, truck, and port connections that shorten transit and reduce
+                cost across regions.
+              </p>
+            </article>
+            <article class="service-card reveal service-card--wide">
+              <span class="service-card__num">05</span>
+              <h3 class="service-card__title">Value-added services</h3>
+              <p class="service-card__text">
+                Packaging, labeling, palletizing, repacking, and distribution
+                support aligned to your downstream needs.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="about">
-        <div class="container">
-          <h2 class="section__title">About Us</h2>
-          <h3>Who We Are</h3>
-          <p>
-            Red River Terminal is a U.S.-based logistics and freight terminal
-            dedicated to providing efficient, secure, and transparent solutions
-            for businesses of all sizes. With decades of industry expertise and
-            a commitment to innovation, we serve as a vital link in the supply
-            chain — ensuring products are handled with care, stored securely, and
-            transported on time.
-          </p>
-          <h3>Our Mission</h3>
-          <p>
-            To simplify logistics, empower commerce, and provide world-class
-            terminal services that connect businesses to markets across the
-            nation and beyond.
-          </p>
+      <section class="section section--about" id="about">
+        <div class="container about">
+          <div class="about__content reveal">
+            <p class="eyebrow">About us</p>
+            <h2 class="section__title">Who we are</h2>
+            <p>
+              Red River Terminal is a U.S.-based logistics and freight terminal
+              dedicated to efficient, secure, and transparent solutions for
+              businesses of all sizes. We serve as a vital link in the supply
+              chain—products handled with care, stored safely, and moved on
+              schedule.
+            </p>
+            <h3 class="about__subhead">Our mission</h3>
+            <p>
+              To simplify logistics, empower commerce, and provide world-class
+              terminal services that connect businesses to markets across the
+              nation and beyond.
+            </p>
+          </div>
+          <aside class="about__aside reveal" aria-hidden="true">
+            <div class="about__panel">
+              <p class="about__quote">
+                “Reliability isn’t a feature—it’s the baseline.”
+              </p>
+              <div class="about__badge">
+                <span class="about__badge-dot"></span>
+                Terminal-ready • Freight-focused
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="section section--dark map" id="global">
-        <div class="container">
-          <h2 class="section__title section__title--on-dark">
-            We <span class="accent">Spread</span> All Over Europe and America
-          </h2>
-          <img
-            class="map__img"
-            src="./assets/images/map.svg"
-            alt="America map with highlights"
-          />
+      <section class="section section--dark map-section reveal" id="global">
+        <div class="container map-section__inner">
+          <header class="section__head section__head--dark">
+            <p class="eyebrow eyebrow--on-dark">Reach</p>
+            <h2 class="section__title section__title--on-dark">
+              Across <span class="accent">North America</span> &amp; beyond
+            </h2>
+            <p class="section__sub section__sub--on-dark">
+              Strategic connections linking ports, rails, and highways.
+            </p>
+          </header>
+          <div class="map-frame">
+            <img
+              class="map__img"
+              src="./assets/images/map.svg"
+              alt="Map highlighting service regions"
+            />
+          </div>
         </div>
       </section>
     </main>
 
-   <footer class="site-footer bg-dark text-light py-5" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <p class="mb-0">
-              © <span id="year"></span> Red River Terminal
-            </p>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="col-md-6">
-            <form id="contact-form" method="POST" action="/send-mail">
-              <div class="mb-3">
-                <label for="name" class="form-label">Your Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  placeholder=""
-                  required
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="email" class="form-label">Your Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder=""
-                  required
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Write your message here..."
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary w-100">
-                Send Message
-              </button>
-            </form>
-          </div>
+    <footer class="site-footer" id="contact">
+      <div class="footer__brand-bar"></div>
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="logo logo--footer" href="#home">
+            <img
+              src="./assets/images/PHOTO-2025-09-30-14-23-43%202.jpg"
+              alt=""
+              width="52"
+              height="52"
+              class="logo__mark"
+            />
+            <span class="logo__text">Red River Terminal</span>
+          </a>
+          <p class="footer__tagline">
+            Terminal operations and freight services you can run your business
+            on.
+          </p>
+          <p class="footer__copy">
+            © <span id="year"></span> Red River Terminal. All rights reserved.
+          </p>
+        </div>
+        <div class="footer__form-wrap">
+          <h2 class="footer__form-title">Send a message</h2>
+          <p class="footer__form-hint">
+            We’ll respond as soon as we can—usually within one business day.
+          </p>
+          <form id="contact-form" class="contact-form" method="POST" action="">
+            <div class="field">
+              <label class="field__label" for="name">Name</label>
+              <input
+                class="field__input"
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="field__label" for="email">Email</label>
+              <input
+                class="field__input"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="field__label" for="message">Message</label>
+              <textarea
+                class="field__input field__input--textarea"
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="How can we help?"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">
+              Send message
+            </button>
+            <p
+              id="contact-status"
+              class="contact-form__status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
+          </form>
         </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js" defer></script>
-
-
-
+    <script src="./js/config.js"></script>
     <script src="./js/main.js" defer></script>
   </body>
 </html>
